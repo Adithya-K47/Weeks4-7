@@ -5,8 +5,12 @@ using UnityEngine.UI;
 
 public class Balloon : MonoBehaviour
 {
+
+    //declaring a float for the balloon's speed
     public float balloonSpeed = 1f;
+    //setting the lifetime of the balloon which can be used for destroying gameobject
     float lifetime = 3f;
+    //setting the starting duration of the timer
     float timer = 0f;
     
 
@@ -19,14 +23,12 @@ public class Balloon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        //THis piece of code makes the balloon float up.
         transform.Translate(Vector3.up * balloonSpeed * Time.deltaTime);
 
-        if (transform.position.y > 7)
-        {
-            Destroy(gameObject);
-        }
-
+       
+        //This is code for a timer, and destroys the object in 3 seconds.
         timer += Time.deltaTime;
         if (timer >= lifetime)
         {
