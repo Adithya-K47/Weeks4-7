@@ -7,9 +7,6 @@ public class BManager : MonoBehaviour
 {
     public GameObject balloon;
     public Transform spawn;
-    public Button spawnerbutton;
-    public Slider speed;
-    public float basespeed = 1f;
 
     // Start is called before the first frame update
     void Start()

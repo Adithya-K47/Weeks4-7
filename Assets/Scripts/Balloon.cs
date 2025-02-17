@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Balloon : MonoBehaviour
 {
     public float balloonSpeed = 1f;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +17,7 @@ public class Balloon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         transform.Translate(Vector3.up * balloonSpeed * Time.deltaTime);
 
         if (transform.position.y > 7)
@@ -21,4 +25,6 @@ public class Balloon : MonoBehaviour
             Destroy(gameObject);
         }
     }
+   
+    
 }
